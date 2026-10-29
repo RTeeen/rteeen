@@ -27,11 +27,8 @@ I care about systems that are easy to reason about at 3am: idempotent loads, cle
 
 **Warehouse plumbing.** Models, incremental loads and the glue that keeps the same pipeline working across different warehouse engines.
 
-## What I'm exploring
+**SaaS** Anything that helps your startup turn into a real business.
 
-Lately I've been building **AI agents and developer tooling** around data platforms: giving agents safe, read-only access to pipelines so they can help triage failures, plus small tools that take the toil out of day-to-day engineering.
-
-<br>
 
 <div align="center">
 
