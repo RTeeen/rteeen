@@ -9,6 +9,10 @@ from pathlib import Path
 
 # ---------------------------------------------------------------- CONTENT
 HANDLE = "rteeen"
+NAME = "RTeeen"  # shown in the title; swap for your real name if you like
+EYEBROW = "// hello, world"
+HEADLINE = f"Hi, I'm {NAME}"
+SUBTITLE = "I build data pipelines that don't wake anyone up at 3am."
 ROLE = "data engineer"
 TAGLINE = "pipelines · identity · warehouses"
 SOURCES = ["api", "files", "events", "crm", "stream"]
@@ -42,6 +46,7 @@ THEMES = {
     ),
 }
 
+SANS = "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif"
 MONO = "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace"
 W = 840
 CHAR_W = 8.45  # ~0.6em advance of common monospace fonts at 14px
@@ -55,6 +60,34 @@ def svg(height: int, title: str, css: str, body: str) -> str:
         f'viewBox="0 0 {W} {height}" xml:space="preserve" role="img" aria-label="{escape(title)}">\n'
         f"<title>{escape(title)}</title>\n<style>\n{css}\n{REDUCED}\n</style>\n{body}\n</svg>\n"
     )
+
+
+# ---------------------------------------------------------------- TITLE
+def title(t: dict) -> str:
+    h, cx = 190, W / 2
+    css = f"""
+    .eyebrow {{ font-family: {MONO}; font-size: 14px; fill: {t['a3']}; letter-spacing: .12em;
+                animation: rise .6s ease-out .1s both; }}
+    .head {{ font-family: {SANS}; font-size: 64px; font-weight: 800; letter-spacing: -.03em; }}
+    .sweep {{ animation: sweep 6s linear infinite; }}
+    .sub {{ font-family: {SANS}; font-size: 18px; fill: {t['muted']}; animation: rise .6s ease-out .5s both; }}
+    .rule {{ fill: none; stroke: url(#g); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 100;
+             animation: draw 1s cubic-bezier(.6,0,.2,1) .3s both; }}
+    @keyframes sweep {{ to {{ transform: translateX(-{W}px); }} }}
+    @keyframes rise {{ from {{ opacity: 0; transform: translateY(8px); }} }}
+    @keyframes draw {{ from {{ stroke-dashoffset: 100; }} }}
+    """
+    stops = [t["a1"], t["a2"], t["a3"], t["a1"], t["a2"], t["a3"], t["a1"]]
+    grad = "".join(f'<stop offset="{i / (len(stops) - 1):.3f}" stop-color="{c}"/>' for i, c in enumerate(stops))
+    body = f"""<defs>
+<linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{W * 2}" y2="0">{grad}</linearGradient>
+<clipPath id="txt"><text class="head" x="{cx}" y="112" text-anchor="middle">{escape(HEADLINE)}</text></clipPath>
+</defs>
+<text class="eyebrow" x="{cx}" y="36" text-anchor="middle">{escape(EYEBROW)}</text>
+<g clip-path="url(#txt)"><rect class="sweep" x="0" y="40" width="{W * 2}" height="90" fill="url(#g)"/></g>
+<path class="rule" pathLength="100" d="M{cx - 60},136 H{cx + 60}"/>
+<text class="sub" x="{cx}" y="172" text-anchor="middle">{escape(SUBTITLE)}</text>"""
+    return svg(h, HEADLINE, css, body)
 
 
 # ---------------------------------------------------------------- HERO
@@ -195,7 +228,7 @@ def footer(t: dict) -> str:
 def main() -> None:
     out = Path(__file__).parent / "assets"
     out.mkdir(exist_ok=True)
-    for name, fn in [("hero", hero), ("terminal", terminal), ("footer", footer)]:
+    for name, fn in [("title", title), ("hero", hero), ("terminal", terminal), ("footer", footer)]:
         for theme, t in THEMES.items():
             (out / f"{name}-{theme}.svg").write_text(fn(t), encoding="utf-8")
     print("wrote", sorted(p.name for p in out.glob("*.svg")))

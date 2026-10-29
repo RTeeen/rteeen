@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="190" viewBox="0 0 840 190" xml:space="preserve" role="img" aria-label="Hi, I&#x27;m RTeeen">
+<title>Hi, I&#x27;m RTeeen</title>
+<style>
+
+    .eyebrow { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace; font-size: 14px; fill: #34d399; letter-spacing: .12em;
+                animation: rise .6s ease-out .1s both; }
+    .head { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif; font-size: 64px; font-weight: 800; letter-spacing: -.03em; }
+    .sweep { animation: sweep 6s linear infinite; }
+    .sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif; font-size: 18px; fill: #7d8590; animation: rise .6s ease-out .5s both; }
+    .rule { fill: none; stroke: url(#g); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 100;
+             animation: draw 1s cubic-bezier(.6,0,.2,1) .3s both; }
+    @keyframes sweep { to { transform: translateX(-840px); } }
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+    @keyframes draw { from { stroke-dashoffset: 100; } }
+    
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } .motion { display: none; } }
+</style>
+<defs>
+<linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1680" y2="0"><stop offset="0.000" stop-color="#22d3ee"/><stop offset="0.167" stop-color="#a78bfa"/><stop offset="0.333" stop-color="#34d399"/><stop offset="0.500" stop-color="#22d3ee"/><stop offset="0.667" stop-color="#a78bfa"/><stop offset="0.833" stop-color="#34d399"/><stop offset="1.000" stop-color="#22d3ee"/></linearGradient>
+<clipPath id="txt"><text class="head" x="420.0" y="112" text-anchor="middle">Hi, I&#x27;m RTeeen</text></clipPath>
+</defs>
+<text class="eyebrow" x="420.0" y="36" text-anchor="middle">// hello, world</text>
+<g clip-path="url(#txt)"><rect class="sweep" x="0" y="40" width="1680" height="90" fill="url(#g)"/></g>
+<path class="rule" pathLength="100" d="M360.0,136 H480.0"/>
+<text class="sub" x="420.0" y="172" text-anchor="middle">I build data pipelines that don&#x27;t wake anyone up at 3am.</text>
+</svg>
