@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="350" viewBox="0 0 840 350" xml:space="preserve" role="img" aria-label="Terminal: about rteeen">
+<title>Terminal: about rteeen</title>
+<style>
+
+    text { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace; font-size: 14px; white-space: pre; }
+    .ps { fill: #059669; font-weight: 700; }
+    .cmd { fill: #1f2328; }
+    .out { fill: #59636e; }
+    .cover { fill: #f6f8fa; }
+    .cursor { fill: #0891b2; animation: fade 0s 6.40s both, blink 1s steps(1) 6.40s infinite; }
+    .title { fill: #59636e; font-size: 12px; }
+    @keyframes fade { from { opacity: 0; } }
+    @keyframes blink { 50% { opacity: 0; } }
+    .c0 { transform: translateX(54.7px); animation: type0 0.33s steps(6) 0.95s both; } @keyframes type0 { from { transform: translateX(0); } }
+.o1 { animation: fade .3s ease-out 1.53s both; }
+.c2 { transform: translateX(113.8px); animation: type2 0.71s steps(13) 2.00s both; } @keyframes type2 { from { transform: translateX(0); } }
+.o3 { animation: fade .3s ease-out 2.96s both; }
+.o4 { animation: fade .3s ease-out 3.08s both; }
+.c5 { transform: translateX(113.8px); animation: type5 0.71s steps(13) 3.56s both; } @keyframes type5 { from { transform: translateX(0); } }
+.o6 { animation: fade .3s ease-out 4.52s both; }
+.o7 { animation: fade .3s ease-out 4.64s both; }
+.o8 { animation: fade .3s ease-out 4.76s both; }
+.c9 { transform: translateX(80.0px); animation: type9 0.49s steps(9) 5.23s both; } @keyframes type9 { from { transform: translateX(0); } }
+.o10 { animation: fade .3s ease-out 5.98s both; }
+    
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } .motion { display: none; } }
+</style>
+<clipPath id="win"><rect x="1" y="1" width="838" height="348" rx="12"/></clipPath>
+<rect x="1" y="1" width="838" height="348" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+<path d="M1,36 H839" stroke="#d0d7de"/>
+<circle cx="22" cy="18.5" r="6" fill="#ff5f57"/>
+<circle cx="42" cy="18.5" r="6" fill="#febc2e"/>
+<circle cx="62" cy="18.5" r="6" fill="#28c840"/>
+<text class="title" x="420.0" y="23" text-anchor="middle">rteeen@github: ~</text>
+<g clip-path="url(#win)">
+<text x="30" y="64"><tspan class="ps">$</tspan> <tspan class="cmd">whoami</tspan></text>
+<rect class="cover c0" x="46.9" y="49" width="54.7" height="20"/>
+<text class="out o1" x="30" y="86">rteeen — data engineer</text>
+<text x="30" y="108"><tspan class="ps">$</tspan> <tspan class="cmd">cat about.txt</tspan></text>
+<rect class="cover c2" x="46.9" y="93" width="113.8" height="20"/>
+<text class="out o3" x="30" y="130">I build the plumbing that turns messy sources into clean,</text>
+<text class="out o4" x="30" y="152">trustworthy data — ingestion, identity resolution, warehouses.</text>
+<text x="30" y="174"><tspan class="ps">$</tspan> <tspan class="cmd">cat stack.yml</tspan></text>
+<rect class="cover c5" x="46.9" y="159" width="113.8" height="20"/>
+<text class="out o6" x="30" y="196">lang:   [python, sql, typescript]</text>
+<text class="out o7" x="30" y="218">data:   [snowflake, databricks, dbt, spark]</text>
+<text class="out o8" x="30" y="240">cloud:  [azure, aws]</text>
+<text x="30" y="262"><tspan class="ps">$</tspan> <tspan class="cmd">ls ./into</tspan></text>
+<rect class="cover c9" x="46.9" y="247" width="80.0" height="20"/>
+<text class="out o10" x="30" y="284">data-platforms/  dev-tooling/  ai-agents/  automation/</text>
+<text x="30" y="306"><tspan class="ps">$</tspan></text>
+<rect class="cursor" x="46.9" y="292" width="9" height="18"/>
+</g>
+</svg>
