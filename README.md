@@ -14,8 +14,8 @@
 
 <div align="center">
 
-**Currently** — building data platforms, tinkering with AI agents and developer tooling.<br>
-**Open to** — conversations about data engineering, pipelines and automation.
+**Currently**: Building data platforms, tinkering with AI agents and developer tooling.<br>
+**Open to**: Conversations about data engineering, pipelines and automation.
 
 </div>
 
