@@ -22,5 +22,5 @@
 <text class="eyebrow" x="420.0" y="36" text-anchor="middle">// hello, world</text>
 <g clip-path="url(#txt)"><rect class="sweep" x="0" y="40" width="1680" height="90" fill="url(#g)"/></g>
 <path class="rule" pathLength="100" d="M360.0,136 H480.0"/>
-<text class="sub" x="420.0" y="172" text-anchor="middle">I build data pipelines that don&#x27;t wake anyone up at 3am.</text>
+<text class="sub" x="420.0" y="172" text-anchor="middle">I build software end to end, from the database to the button you click.</text>
 </svg>

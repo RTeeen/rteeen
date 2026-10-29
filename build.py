@@ -12,24 +12,25 @@ HANDLE = "rteeen"
 NAME = "RTeeen"  # shown in the title; swap for your real name if you like
 EYEBROW = "// hello, world"
 HEADLINE = f"Hi, I'm {NAME}"
-SUBTITLE = "I build data pipelines that don't wake anyone up at 3am."
-ROLE = "data engineer"
-TAGLINE = "pipelines · identity · warehouses"
-SOURCES = ["api", "files", "events", "crm", "stream"]
+SUBTITLE = "I build software end to end, from the database to the button you click."
+ROLE = "software engineer"
+TAGLINE = "frontend · backend · data"
+SOURCES = ["ui/ux", "frontend", "backend", "apis", "data"]
 
 # (kind, text): "cmd" lines are typed after a prompt, "out" lines fade in.
 TERMINAL = [
     ("cmd", "whoami"),
     ("out", f"{HANDLE} — {ROLE}"),
     ("cmd", "cat about.txt"),
-    ("out", "I build the plumbing that turns messy sources into clean,"),
-    ("out", "trustworthy data — ingestion, identity resolution, warehouses."),
+    ("out", "Full-stack engineer: SaaS products, backend systems, data platforms"),
+    ("out", "and the interfaces that sit on top of them."),
     ("cmd", "cat stack.yml"),
-    ("out", "lang:   [python, sql, typescript]"),
+    ("out", "lang:   [python, typescript, sql]"),
+    ("out", "web:    [html, css, rest apis]"),
     ("out", "data:   [snowflake, databricks, dbt, spark]"),
     ("out", "cloud:  [azure, aws]"),
     ("cmd", "ls ./into"),
-    ("out", "data-platforms/  dev-tooling/  ai-agents/  automation/"),
+    ("out", "saas/  backend/  frontend/  ui-ux/  data/  ai-agents/"),
 ]
 
 # ---------------------------------------------------------------- THEMES
@@ -135,14 +136,15 @@ def hero(t: dict) -> str:
     parts += [
         f'<circle class="ring" cx="{core_x}" cy="{core_y}" r="60"/>',
         f'<polygon class="core" points="{hexpts}"/>',
-        f'<text class="lbl" x="{core_x}" y="{core_y + 4}" text-anchor="middle">transform</text>',
+        f'<text class="lbl" x="{core_x}" y="{core_y + 4}" text-anchor="middle">build</text>',
         f'<path class="flow" d="M394,{core_y} L466,{core_y}"/>',
         f'<path class="pkt motion" pathLength="100" stroke="{t["a2"]}" d="M394,{core_y} L466,{core_y}" style="animation-delay:1.2s"/>',
-        # warehouse cylinder
-        f'<path class="wh" d="M470,124 v52 a35,10 0 0 0 70,0 v-52"/>',
-        f'<ellipse class="wh" cx="505" cy="124" rx="35" ry="10"/>',
-        f'<path class="wh" d="M470,141 a35,10 0 0 0 70,0 M470,158 a35,10 0 0 0 70,0" fill="none"/>',
-        f'<text class="lbl" x="505" y="208" text-anchor="middle">warehouse</text>',
+        # product: browser window
+        f'<rect class="wh" x="470" y="122" width="70" height="56" rx="7"/>',
+        f'<path class="wh" d="M470,136 H540"/>',
+        *(f'<circle cx="{479 + k*7}" cy="129" r="2" fill="{t["a1"]}"/>' for k in range(3)),
+        f'<path class="wh" d="M480,148 h30 M480,158 h44 M480,168 h22" stroke-linecap="round"/>',
+        f'<text class="lbl" x="505" y="208" text-anchor="middle">product</text>',
         f'<path class="flow" d="M544,{core_y} L572,{core_y}"/>',
         # output: the name
         f'<text class="name" x="582" y="146">{escape(HANDLE)}</text>',

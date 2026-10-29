@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="350" viewBox="0 0 840 350" xml:space="preserve" role="img" aria-label="Terminal: about rteeen">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="372" viewBox="0 0 840 372" xml:space="preserve" role="img" aria-label="Terminal: about rteeen">
 <title>Terminal: about rteeen</title>
 <style>
 
@@ -7,7 +7,7 @@
     .cmd { fill: #e6edf3; }
     .out { fill: #7d8590; }
     .cover { fill: #0b0f17; }
-    .cursor { fill: #22d3ee; animation: fade 0s 6.40s both, blink 1s steps(1) 6.40s infinite; }
+    .cursor { fill: #22d3ee; animation: fade 0s 6.52s both, blink 1s steps(1) 6.52s infinite; }
     .title { fill: #7d8590; font-size: 12px; }
     @keyframes fade { from { opacity: 0; } }
     @keyframes blink { 50% { opacity: 0; } }
@@ -20,13 +20,14 @@
 .o6 { animation: fade .3s ease-out 4.52s both; }
 .o7 { animation: fade .3s ease-out 4.64s both; }
 .o8 { animation: fade .3s ease-out 4.76s both; }
-.c9 { transform: translateX(80.0px); animation: type9 0.49s steps(9) 5.23s both; } @keyframes type9 { from { transform: translateX(0); } }
-.o10 { animation: fade .3s ease-out 5.98s both; }
+.o9 { animation: fade .3s ease-out 4.88s both; }
+.c10 { transform: translateX(80.0px); animation: type10 0.49s steps(9) 5.35s both; } @keyframes type10 { from { transform: translateX(0); } }
+.o11 { animation: fade .3s ease-out 6.10s both; }
     
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .motion { display: none; } }
 </style>
-<clipPath id="win"><rect x="1" y="1" width="838" height="348" rx="12"/></clipPath>
-<rect x="1" y="1" width="838" height="348" rx="12" fill="#0b0f17" stroke="#30363d"/>
+<clipPath id="win"><rect x="1" y="1" width="838" height="370" rx="12"/></clipPath>
+<rect x="1" y="1" width="838" height="370" rx="12" fill="#0b0f17" stroke="#30363d"/>
 <path d="M1,36 H839" stroke="#30363d"/>
 <circle cx="22" cy="18.5" r="6" fill="#ff5f57"/>
 <circle cx="42" cy="18.5" r="6" fill="#febc2e"/>
@@ -35,20 +36,21 @@
 <g clip-path="url(#win)">
 <text x="30" y="64"><tspan class="ps">$</tspan> <tspan class="cmd">whoami</tspan></text>
 <rect class="cover c0" x="46.9" y="49" width="54.7" height="20"/>
-<text class="out o1" x="30" y="86">rteeen — data engineer</text>
+<text class="out o1" x="30" y="86">rteeen — software engineer</text>
 <text x="30" y="108"><tspan class="ps">$</tspan> <tspan class="cmd">cat about.txt</tspan></text>
 <rect class="cover c2" x="46.9" y="93" width="113.8" height="20"/>
-<text class="out o3" x="30" y="130">I build the plumbing that turns messy sources into clean,</text>
-<text class="out o4" x="30" y="152">trustworthy data — ingestion, identity resolution, warehouses.</text>
+<text class="out o3" x="30" y="130">Full-stack engineer: SaaS products, backend systems, data platforms</text>
+<text class="out o4" x="30" y="152">and the interfaces that sit on top of them.</text>
 <text x="30" y="174"><tspan class="ps">$</tspan> <tspan class="cmd">cat stack.yml</tspan></text>
 <rect class="cover c5" x="46.9" y="159" width="113.8" height="20"/>
-<text class="out o6" x="30" y="196">lang:   [python, sql, typescript]</text>
-<text class="out o7" x="30" y="218">data:   [snowflake, databricks, dbt, spark]</text>
-<text class="out o8" x="30" y="240">cloud:  [azure, aws]</text>
-<text x="30" y="262"><tspan class="ps">$</tspan> <tspan class="cmd">ls ./into</tspan></text>
-<rect class="cover c9" x="46.9" y="247" width="80.0" height="20"/>
-<text class="out o10" x="30" y="284">data-platforms/  dev-tooling/  ai-agents/  automation/</text>
-<text x="30" y="306"><tspan class="ps">$</tspan></text>
-<rect class="cursor" x="46.9" y="292" width="9" height="18"/>
+<text class="out o6" x="30" y="196">lang:   [python, typescript, sql]</text>
+<text class="out o7" x="30" y="218">web:    [html, css, rest apis]</text>
+<text class="out o8" x="30" y="240">data:   [snowflake, databricks, dbt, spark]</text>
+<text class="out o9" x="30" y="262">cloud:  [azure, aws]</text>
+<text x="30" y="284"><tspan class="ps">$</tspan> <tspan class="cmd">ls ./into</tspan></text>
+<rect class="cover c10" x="46.9" y="269" width="80.0" height="20"/>
+<text class="out o11" x="30" y="306">saas/  backend/  frontend/  ui-ux/  data/  ai-agents/</text>
+<text x="30" y="328"><tspan class="ps">$</tspan></text>
+<rect class="cursor" x="46.9" y="314" width="9" height="18"/>
 </g>
 </svg>
